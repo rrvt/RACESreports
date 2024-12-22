@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+<Product Id="*" UpgradeCode="41421C9F-E233-480D-893E-63A792A63FFE" Language="1033"
+                Manufacturer="Bob -- K6RWY" Name="RacesReports"
+                Version="!(bind.fileVersion.RACES_DB_Reports.cmp)"
+                >
+
+  <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
+                Manufacturer="Bob -- K6RWY" Description="Installs RacesReports"
+                Comments="Copyright (c) Bob -- K6RWY"
+                />
+
+  <MajorUpgrade Schedule="afterInstallInitialize"
+                AllowDowngrades="no"   IgnoreRemoveFailure="no"   AllowSameVersionUpgrades="no"
+                DowngradeErrorMessage="A newer version of [ProductName] is already installed."
+                />
+
+  <MediaTemplate EmbedCab="yes" />
+
+  <WixVariable Id="WixUILicenseRtf"
+                              Value="$(var.SolutionDir)..\..\Library\License\MITLicenseFile.rtf" />
+  <UI Id="My_InstallDir.ui"><UIRef Id="WixUI_InstallDir" /></UI>
+
+  <WixVariable Id="WixUIDialogBmp" Value="C:\Program Files (x86)\WixApp\dialog.bmp"/>
+  <WixVariable Id="WixUIBannerBmp" Value="C:\Program Files (x86)\WixApp\banner.bmp"/>
+
+  <Icon     Id="RacesReportsUI_Icon.exe"
+                        SourceFile="$(var.SolutionDir)..\RacesReports.prj\res\RacesReportsUI.ico"/>
+  <Icon     Id="RacesReports_Icon.exe"
+                          SourceFile="$(var.SolutionDir)..\RacesReports.prj\res\RacesReports.ico"/>
+  <Icon     Id="MITLicense_Icon.exe"
+                              SourceFile="$(var.SolutionDir)..\..\Library\License\MITLicense.ico"/>
+  <Property Id="ARPPRODUCTICON"  Value="RacesReportsUI_Icon.exe" />
+
+  <Feature Id="ProductFeatures" Title="Main Product" Level="1" >
+    <ComponentGroupRef Id="RacesReports.ftr"/>
+    <ComponentGroupRef Id="License.ftr"/>
+    <ComponentGroupRef Id="Uninstall_RACES_DB_Reports.ftr"/>
+  </Feature>
+</Product>
+
+<Fragment>
+  <ComponentGroup Id="RacesReports.ftr">
+    <ComponentRef Id="RACES_DB_Reports.cmp"/>
+    <ComponentRef Id="Help.cmp"/>
+  </ComponentGroup>
+  <ComponentGroup Id="License.ftr">
+    <ComponentRef Id="MIT_License.cmp"/>
+  </ComponentGroup>
+  <ComponentGroup Id="Uninstall_RACES_DB_Reports.ftr">
+    <ComponentRef Id="Uninstall_RACES_DB_Reports.cmp"/>
+  </ComponentGroup>
+</Fragment>
+
+<!--Directory structure-->
+<Fragment>
+  <Directory Id="TARGETDIR" Name="SourceDir">
+    <Directory Id="ProgramFilesFolder">
+      <Directory Id="RACESREPORTS.PFF" Name="RacesReports" />
+    </Directory>
+
+    <Directory Id="ProgramMenuFolder">
+      <Directory Id="RacesReports.pmf" Name="RacesReports" />
+    </Directory>
+
+    <Directory Id="DesktopFolder" />
+  </Directory>
+
+  <Property Id="ApplicationFolderName" Value="RacesReports" />
+  <Property Id="WIXUI_INSTALLDIR"      Value="RACESREPORTS.PFF"/>
+  <Property Id="WixAppFolder"          Value="WixPerMachineFolder" />
+</Fragment>
+
+<Fragment>
+  <Component Id="RACES_DB_Reports.cmp" Guid="115607F4-F4F4-43CB-8E4C-04C0B4EA2B48"
+                                                                      Directory="RACESREPORTS.PFF">
+    <File Id="RACES_DB_Reports.cmp"
+                             Source="$(var.SolutionDir)..\Release\RacesReports.exe" KeyPath="yes"/>
+
+    <Shortcut Id               = "RACESDBReports.shc"
+              Name             = "RACES DB Reports"
+              Description      = "Races Database Manipulation"
+              Advertise        = "yes"
+              Directory        = "RacesReports.pmf"
+              WorkingDirectory = "RACESREPORTS.PFF"
+              Icon             = "RacesReports_Icon.exe"
+              />
+
+    <Shortcut Id               = "RACESDBReports.dsk"
+              Name             = "RACES DB Reports"
+              Description      = "Races Database Manipulation"
+              Advertise        = "yes"
+              Directory        = "DesktopFolder"
+              WorkingDirectory = "RACESREPORTS.PFF"
+              Icon             = "RacesReports_Icon.exe"
+              />
+  </Component>
+
+  <Component Id="Help.cmp" Guid="0D21FFAA-5717-4755-A88D-522CB588D9BC"
+                                                                      Directory="RACESREPORTS.PFF">
+    <File Id="Help.cmp" Source="$(var.SolutionDir)..\Release\RacesReports.chm" KeyPath="yes"/>
+  </Component>
+</Fragment>
+
+<Fragment>
+  <Component Id="MIT_License.cmp" Guid="0FEA5109-CF72-4CB3-889A-09D981F99E98"
+                                                                      Directory="RACESREPORTS.PFF">
+    <File Id="MIT_License.cmp"
+                Source="$(var.SolutionDir)..\..\Library\License\MITLicenseFile.rtf" KeyPath="yes"/>
+
+    <Shortcut Id               = "MITLicense.shc"
+              Name             = "MIT License"
+              Advertise        = "yes"
+              Directory        = "RacesReports.pmf"
+              WorkingDirectory = "RACESREPORTS.PFF"
+              Icon             = "MITLicense_Icon.exe"
+              />
+  </Component>
+</Fragment>
+
+<Fragment>
+  <Component Id="Uninstall_RACES_DB_Reports.cmp"
+                          Guid="7C7FA139-7BB0-41A2-AAEB-CE3BA62A345A" Directory="RacesReports.pmf">
+
+    <Shortcut Id               = "UninstallRACESDBReports.shc"
+              Name             = "Uninstall RACES DB Reports"
+              Description      = "Uninstalls RACES DB Reports"
+              Target           = "[System64Folder]msiexec.exe"
+              Arguments        = "/x [ProductCode]"
+              Icon             = "RacesReportsUI_Icon.exe"
+              />
+    <RemoveFolder Id="RacesReports.uni" Directory="RacesReports.pmf" On="uninstall"/>
+    <RegistryValue Root="HKCU" Key="Software\Uninstall_RACES_DB_Reports.cmp"
+                                          Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+  </Component>
+</Fragment>
+</Wix>
