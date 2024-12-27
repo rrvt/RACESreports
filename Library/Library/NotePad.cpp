@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include "NotePad.h"
-#include "Archive.h"
+//#include "Archive.h"
 //#include "NtPdToArch.h"
 
 
@@ -84,33 +84,6 @@ void NotePad::initialize() {
   nDebug.n     = this; nDebug.func     = NotePad::doDebug;
 
   noLines = 0;
-  }
-
-
-void NotePad::archive(Archive& ar) {
-NtPdIter iter(*this);
-Note*    nt;
-
-  ar.arLine.clear();   ar.nmbr.clear();
-
-  for (nt = iter(); nt; nt = iter++) {
-    if (nt->leftMgn  >= 0)   ar.setLMargin(nt->leftMgn);
-    if (nt->rightMgn >= 0)   ar.setRMargin(nt->rightMgn);
-    if (nt->clrTabs)         ar.clrTabs();
-    if (nt->noteTab.pos) {   if (nt->noteTab.right) ar.setRTab(nt->noteTab.pos);
-                             else                   ar.setTab( nt->noteTab.pos);
-                             }
-    if (nt->tabSeen)         ar.tab();
-    if (nt->center)          ar.center();
-    if (nt->right)           ar.right();
-    if (nt->beginLine)       ar.beginULine();
-    if (!nt->line.isEmpty()) ar.arLine.append(nt->line);
-    if (nt->nmbr.typ)       {ar.nmbr = nt->nmbr;  ar.append(ar.nmbr());}
-    if (nt->endLine)         ar.endULine();
-    if (nt->crlf)            ar.crlf();
-    }
-
-  ar.flush();
   }
 
 

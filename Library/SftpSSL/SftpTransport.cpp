@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "SftpTransport.h"
+#include "Archive.h"
 #include "FileIO.h"
 #include "NotePad.h"
 #include "SftpDataIter.h"

@@ -303,7 +303,7 @@ PathDlgDsc dsc(_T("Output File"), name, fileType, pattern);
 
 void RacesReportsDOC::serialize(Archive& ar) {
 
-  if (ar.isStoring()) notePad.archive(ar);
+  if (ar.isStoring()) ar << notePad;
 
   else
     switch(dataSource) {

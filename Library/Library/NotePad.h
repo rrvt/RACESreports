@@ -109,14 +109,12 @@
 
 
 #pragma once
-#include "Archive.h"
+//#include "Archive.h"
 #include "Currency.h"
 #include "Date.h"
 #include "ManipT.h"
 #include "Note.h"
 #include "NoteUndrLn.h"
-
-class TextPosition;
 
 enum {DefFSize = 120};              // pt * 10 i.e. 12.2pt == 122
 class NotePad;
@@ -171,7 +169,6 @@ public:
                             {NewAlloc(NtManipStg); m.func(*this, m.v); FreeNode(&m); return *this;}
 
   void     setArchiveAttr(int w, double f = 1.0) {arWidth   = w; tabFactor = f;}
-  void     archive(Archive& ar);
 
   bool     append(Note* note) {noteList.append(note); return note->crlf;}
 
@@ -323,4 +320,6 @@ private:
 
 //  void     movPos(TextPosition& from, int to, Archive& ar);
 //  int      applyTabFactor(int tb);
+
+//class TextPosition;
 

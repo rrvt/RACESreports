@@ -55,6 +55,11 @@ All the code is contained in the two directories.
 
 ## Updates
 
+### Update 12/26/24
+
+Split the library into DocLib and Library where DocLib supports the MFC Document/Library App
+projects and Library has support classes and supports the Dialog Apps with only one class.
+
 ### Update 12/22/24
 
 Change the name from RWracesDB to RACESreports to better reflect that nature of the program.

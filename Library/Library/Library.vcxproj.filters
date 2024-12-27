@@ -15,21 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Archive.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CalibDpsPrt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CDoc.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CMainFrm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ComboBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,15 +28,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CryptInit.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CSVLex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CSVOut.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CSVRcdB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Currency.cpp">
@@ -82,9 +58,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Handle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Horiz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IniFile.cpp">
@@ -120,9 +93,6 @@
     <ClCompile Include="TBEditBox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextPosition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ToString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -130,12 +100,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Utilities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VertMgmt.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Wrap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="XTerm.cpp">
@@ -153,19 +117,10 @@
     <ClCompile Include="StatusBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Xmlparser.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="XmlStore.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="XmlElement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="XmlAttributes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ClipLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Static.cpp">
@@ -180,19 +135,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Display.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Printer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FontMgr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DevTabs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UndrLn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NoteNmbr.cpp">
@@ -216,80 +159,35 @@
     <ClCompile Include="TBMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ByteBlock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CNG.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CNGblock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="NoteUndrLn.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArchFile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArchPos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tabs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CDialogApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArchFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Archive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArchPos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="ArchULines.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CScrView.cpp">
+    <ClCompile Include="Display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextAccm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Device.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DevStream.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ManageDisplay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ManagePrinter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NtPdToDev.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ReportBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ReportNtPd.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeviceContext.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Devices.cpp">
+    <ClCompile Include="ClipBoard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Archive.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CalibDspPrt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CApp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CDoc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CMainFrm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ComboBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -297,15 +195,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Crypt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CSVLex.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CSVOut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CSVRcdB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CSVRcdsT.h">
@@ -342,9 +231,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Handle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Horiz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IniFile.h">
@@ -407,9 +293,6 @@
     <ClInclude Include="TBEditBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextPosition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Token.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -423,12 +306,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Variant.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VertMgmt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Wrap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="XTerm.h">
@@ -452,19 +329,10 @@
     <ClInclude Include="StatusBar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Xmlparser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XmlStore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="XmlElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="XmlAttributes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ClipLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Static.h">
@@ -482,19 +350,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Display.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Printer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FontMgr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DevTabs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UndrLn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NoteNmbr.h">
@@ -530,75 +386,38 @@
     <ClInclude Include="TBMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ByteBlock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CNG.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CNGblock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="NoteUndrLn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ArchFile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ArchPos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tabs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ArchULines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CScrView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="NoteTab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextAccm.h">
+    <ClInclude Include="CDialogApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Device.h">
+    <ClInclude Include="ArchFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DevStream.h">
+    <ClInclude Include="Archive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ManageDevBase.h">
+    <ClInclude Include="ArchPos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ManageDisplay.h">
+    <ClInclude Include="ArchULines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ManagePrinter.h">
+    <ClInclude Include="Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NtPdToDev.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ReportBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ReportNtPd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeviceData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Devices.h">
+    <ClInclude Include="ClipBoard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Documentation\XML.pdf" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>
