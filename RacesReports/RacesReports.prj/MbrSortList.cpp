@@ -8,7 +8,6 @@
 #include "StsTbl.h"
 
 
-MbrSortList mbrSortList;
 
 
 void MbrSortList::create() {

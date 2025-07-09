@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "RacesReportsView.h"
+#include "IniFileEx.h"
 #include "OptionsDlg.h"
 #include "Resource.h"
 #include "RacesReports.h"

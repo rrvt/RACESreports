@@ -7,7 +7,7 @@ RacesReports.chm : *.htm RacesReports.hhp RacesReports.hhc App.css
 Clean.cln    :
   @echo "Cleaning"
   cd $(MAKEDIR)
-  del /F RacesReports.chm
+  if exist RacesReports.chm del /F RacesReports.chm
 
 
 Release/RacesReports.chm : RacesReports.chm
@@ -16,7 +16,7 @@ Release/RacesReports.chm : RacesReports.chm
 
 Release/Clean.cln    : Clean.cln
   cd $(MAKEDIR)\..\Release
-  del RacesReports.chm
+  if exist RacesReports.chm del /F RacesReports.chm
   cd $(MAKEDIR)
 
 
@@ -26,7 +26,7 @@ Debug/RacesReports.chm : RacesReports.chm
 
 Debug/Clean.cln    : Clean.cln
   cd $(MAKEDIR)\..\Debug
-  del RacesReports.chm
+  if exist RacesReports.chm del /F RacesReports.chm
   cd $(MAKEDIR)
 
 

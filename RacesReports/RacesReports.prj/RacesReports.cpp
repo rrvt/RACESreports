@@ -4,10 +4,13 @@
 #include "pch.h"
 #include "RacesReports.h"
 #include "AboutDlg.h"
+#include "BackupRcds.h"
 #include "Database.h"
 #include "filename.h"
 #include "GetPathDlg.h"
+#include "IniFileEx.h"
 #include "MainFrame.h"
+#include "MbrSortList.h"
 #include "MessageBox.h"
 #include "NotePad.h"
 #include "ResourceData.h"
@@ -16,7 +19,18 @@
 
 
 RacesReports theApp;                    // The one and only RacesReports object
-IniFile      iniFile;
+IniFileEx    iniFile(theApp);
+MbrSortList  mbrSortList;
+
+Database     database;                  // Database Tables
+AccessDB     accessDB;
+AdrTbl       adrTbl;
+AsnTbl       asnTbl;
+CtyTbl       ctyTbl;
+EntTbl       entTbl;
+LocTbl       locTbl;
+MbrTbl       mbrTbl;
+StsTbl       stsTbl;
 
 
 BEGIN_MESSAGE_MAP(RacesReports, CWinAppEx)
@@ -86,6 +100,10 @@ String topic = m_pszHelpFilePath; topic += _T(">Introduction");
   ::HtmlHelp(m_pMainWnd->m_hWnd, topic,  HH_DISPLAY_TOC, 0);
   }
 
+
+int  RacesReports::ExitInstance() {
+  notePad.~NotePad();   backupRcds.~BackupRcds();   return CApp::ExitInstance();
+  }
 
 void RacesReports::OnAppAbout() {AboutDlg aboutDlg; aboutDlg.DoModal();}
 

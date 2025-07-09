@@ -12,6 +12,7 @@
 #include "FCClist.h"
 #include "GetPathDlg.h"
 #include "GoogleRpt.h"
+#include "IniFileEx.h"
 #include "MbrInfo.h"
 #include "MbrSortList.h"
 #include "MemberRpts.h"

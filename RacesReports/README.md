@@ -55,6 +55,10 @@ All the code is contained in the two directories.
 
 ## Updates
 
+### Update 7/8/25
+
+Update Database objects to suppress memory leak reporting.  Factored IniFile into three classes.
+
 ### Update 12/26/24
 
 Split the library into DocLib and Library where DocLib supports the MFC Document/Library App

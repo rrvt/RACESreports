@@ -3,7 +3,6 @@
 
 #pragma once
 #include "CApp.h"
-#include "IniFile.h"
 
 
 extern TCchar* GenFilePathKey;
@@ -24,6 +23,7 @@ public:
   RacesReports() : CApp(this) { }
 
   virtual BOOL InitInstance();
+  virtual int  ExitInstance();
 
   void announceFinish();
 
