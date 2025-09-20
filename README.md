@@ -55,6 +55,10 @@ All the code is contained in the two directories.
 
 ## Updates
 
+### Update 9/19/25
+
+Changes to accomodate changes to ExpandableP.
+
 ### Update 7/8/25
 
 Update Database objects to suppress memory leak reporting.  Factored IniFile into three classes.

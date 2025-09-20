@@ -30,7 +30,7 @@ int     n;
   notePad.clear();
 
   for (i = 0, n = data.end(); i < n; i++) {
-    MbrInfo& mi = *data[i].p;
+    MbrInfo& mi = *data[i];
 
     notePad << mi.callSign    << _T(",");
     notePad << mi.firstName   << _T(",");
@@ -77,7 +77,7 @@ int        maxLn = 0;
 
   for (i = 0, n = data.end(); i < n; i++) {
 
-    MbrInfo& mi = *data[i].p;
+    MbrInfo& mi = *data[i];
 
     String t; t.format(_T("%03s"), mi.badgeNumber.str());
 
@@ -168,7 +168,7 @@ int        tab2;
 
   for (i = 0, n = data.end(); i < n; i++) {
 
-    MbrInfo& mi = *data[i].p;
+    MbrInfo& mi = *data[i];
     if (sortKey == FmrNameSort) {
       notePad << mi.firstName   << nTab;
       notePad << mi.lastName    << nTab;
